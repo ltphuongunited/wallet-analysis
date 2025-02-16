@@ -1,0 +1,113 @@
+
+╔══════════════════════════════════════════════════════════════════════════════
+║ 📌 Wallet Analysis Report
+║ Address: 0x60761c78308a866b5cc0dbc443c5a04e4f705115
+╠══════════════════════════════════════════════════════════════════════════════
+║ 
+║ 🕒 WALLET AGE ANALYSIS
+    First Transaction: 2022-02-03
+    Wallet Age: 3 years, 0 months, 14 days
+    Category: Established
+    Analysis: **Insights:**
+
+* **Established Category:** The wallet has been classified as "Established" due to its significant age of over three years. This indicates that it has been in active use for an extended period.
+
+* **High Experience Level:** The wallet's age of 3 years, 0 months, and 14 days suggests that the owner has a high level of experience in the cryptocurrency market. They have been interacting with the Ethereum network for a substantial amount of time, indicating familiarity with the platform and its operations.
+
+* **Potential Expertise:** The established wallet age may suggest that the owner has gained significant knowledge and expertise in the cryptocurrency space over time. They may have conducted thorough research, understood the underlying technology, and participated in various aspects of the market, such as trading, investing, or developing applications.
+
+* **Trust and Reliability:** The wallet's longevity can also imply a certain level of trust and reliability. Over time, the owner has likely built a reputation within the community and may be recognized as a knowledgeable or experienced participant. This can increase confidence in the wallet's transactions and interactions.
+
+**Additional Considerations:**
+
+* **Activity Level:** While the wallet age provides insights into its experience, it does not necessarily reflect the activity level of the wallet. The owner may have been actively using the wallet throughout this period or may have had periods of inactivity.
+
+* **Other Factors:** Wallet age alone may not be a sufficient indicator of expertise or knowledge. Other factors, such as transaction history, asset holdings, and participation in the community, can provide a more comprehensive understanding of the owner's experience level.
+╠══════════════════════════════════════════════════════════════════════════════
+║ 📈 TREND ANALYSIS
+30-Day Trend:
+- Overall change: Stable
+- Notable changes:
+        • 0xbe4c88d4e3632367c0959c6309a2be42cdbe1178952e1a216d0fe42b5393148e
+    • 0x85c0d69bc51a69b2f48ed75e2757eaae14ae69e63e20a5740d6de000f28e2c7b
+    • 0x44b6b49939cd308732f767a53cd1a396353abdc7ca41344d5d0e97923ceacefc
+    • 0x526606ff6f1207e7ab58c73fca7fa95122e3ae716cf9c7acef1be6e2a690947b
+
+90-Day Trend:
+- Overall change: Stable
+- Notable changes:
+        • 0x20e7c44e9710637a9057a07ee08a18dcc419dc7292bd44f2a5106ef2e939b9aa
+    • 0x9bca9c4244d1a96fc32b11d5d7159ae08de85b888e9ccb575c54a2964f0bee08
+    • 0xf505ac777d7a17028433bc08f1b398f88ddd77fdf0d8374dcf03090012d576fe
+    • 0xafb01436adc1e5c0cb7ebb40eef0e914c09ee0c9a4344d63000abb38925075bb
+    • 0x5d1c0e933a41fe088efd6654df22d080a9ef6a70634b923689c4961d2b4fd1a0
+
+180-Day Trend:
+- Overall change: Increase
+- Notable changes:
+        • 0x66020354f48e7a91406b97688b7dffec15ce65b247119021d6898246307acc34
+    • 0xe801e89a700ef7c8405ae447a59524ba1eac7e6b42c5a631b3f007f85c6ba591
+    • 0x98e3ec6ad37861a8da0553dfe61864910e1181adbaebc9d59422ff9986642b87
+    • 0xdbc99c5c458ec2317ecba4631947641fd75f9ccd192b1e842c5322f269b58ce3
+    • 0x27908fcba52f502fdb054470f3d014bc5ea30ffcd58871650cf57bf51f86403e
+
+Conclusion: The holder appears to be long-term bullish on Ethereum, with minimal trading activity and a gradual increase in holdings over the past six months.
+╠══════════════════════════════════════════════════════════════════════════════
+║ 💰 TRANSACTION ANALYSIS
+Average Transaction Size: $0.00 (Classification: Small)
+Total 30-Day Volume: $0.00 (0.0% of total wallet value)
+
+Top Assets in Transactions:
+1. ETH: 100.0% (Direction: Distributing)
+
+Average Daily Transactions: 0.1
+Analysis: This wallet exhibits atypical behavior characterized by infrequent transactions, small amounts, and no accumulation of significant assets.
+
+- **Infrequent Transactions:** With a daily transaction frequency of 0.1, the wallet engages in minimal activity compared to typical cryptocurrency users. This pattern suggests a cautious approach or infrequent use of the wallet.
+
+- **Small Transaction Size:** The average transaction size of $0.00 indicates that the wallet primarily processes insignificant amounts. This behavior aligns with the overall low activity and suggests a lack of substantial financial engagement.
+
+- **Negligible Value Volume:** The fact that the transaction volume represents only 0.0% of the total value held in the wallet further emphasizes the minimal impact of these transactions on the wallet's overall portfolio.
+
+- **ETH Distribution Pattern:** The wallet holds ETH and has exhibited a pattern of distributing these holdings. This behavior suggests that the wallet is actively sending ETH to other addresses or spending it, potentially for purchases or transfers.
+
+Overall, the wallet's transaction behavior indicates a cautious and non-speculative approach to cryptocurrency. The infrequent small-value transactions, combined with the distribution of ETH holdings, suggest a non-investment-oriented usage pattern, such as using the wallet primarily for making occasional payments or receiving small amounts from others.
+╠══════════════════════════════════════════════════════════════════════════════
+║ 🤖 BEHAVIORAL ANALYSIS
+    Classification: Likely Human
+    Confidence Level: High
+    Key Indicators:
+        Average Gas Used: 49175.00
+        Average Gas Price (Gwei): 10.00
+        Repetitive Trading Hours: 0.00%
+        Repetitive Trading Days: 0.00%
+    Analysis: **Analysis of Ethereum Wallet Behavior Data**
+
+**Wallet Classification:** Likely Human
+
+**Confidence Level:** High
+
+**Key Indicators:**
+
+**1. Average Gas Used:** 49175.00
+**2. Average Gas Price:** 10.00
+**3. Repetitive Hours:** 0.00%
+**4. Repetitive Days:** 0.00%
+
+**Interpretation:**
+
+Based on the key indicators, this Ethereum wallet exhibits behavior that is more consistent with a human operator rather than a bot.
+
+**1. Average Gas Used:** The average gas used is relatively low, indicating that the transactions are less complex and require less computation power. This is a characteristic often associated with human behavior, as bots typically require more computational resources to execute complex actions.
+
+**2. Average Gas Price:** The average gas price is low, suggesting that the wallet operator is not willing to pay high fees for faster transaction confirmation. Humans are less likely to prioritize speed over cost, while bots may be programmed to pay higher gas prices to ensure prompt execution.
+
+**3. Repetitive Hours:** The absence of repetitive hours indicates that the wallet is not consistently active at specific times of the day. Bots are often programmed to perform actions at regular intervals, resulting in repetitive patterns of activity.
+
+**4. Repetitive Days:** Similarly, the lack of repetitive days suggests that the wallet is not active on a predictable schedule. Humans are more likely to use their wallets at varying times and days, while bots may be limited to specific operating windows.
+
+**Conclusion:**
+
+The combination of low gas usage, low gas price, and lack of repetitive behavior strongly suggests that this Ethereum wallet is likely operated by a human. The indicators point to an individual who prioritizes cost over speed and engages in wallet activities on an irregular basis. Therefore, the classification of "Likely Human" with a high confidence level is well-supported by the evidence.
+║ 
+╚══════════════════════════════════════════════════════════════════════════════

@@ -52,7 +52,7 @@ python main.py clear --data
 
 To list all generated reports:
 ```bash
-python main.py list_reports
+python main.py list-reports
 ```
 
 ## 🏗️ Design Decisions
@@ -61,11 +61,11 @@ python main.py list_reports
 - **🤖 AI Integration**: The project uses Gemini AI for providing insights and analysis, enhancing the depth of the reports.
 - **🔐 Environment Configuration**: Sensitive information like API keys is managed using environment variables for security.
 
-## ⚠️ Limitations and Assumptions
+<!-- ## ⚠️ Limitations and Assumptions
 
 - **📊 Data Accuracy**: The accuracy of the analysis depends on the data provided by the APIs. Rate limits and data availability can affect the results.
 - **🔍 Assumptions**: The analysis assumes that the transaction data is complete and accurate. Any missing data can lead to incorrect analysis.
-- **⏳ Rate Limits**: The tool considers rate limits of data sources and implements retry mechanisms to handle temporary failures.
+- **⏳ Rate Limits**: The tool considers rate limits of data sources and implements retry mechanisms to handle temporary failures. -->
 
 ## 📂 Data Format
 

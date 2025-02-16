@@ -1,0 +1,7 @@
+requests
+python-dotenv
+pandas
+google-generativeai
+phidata
+pytest
+ratelimit

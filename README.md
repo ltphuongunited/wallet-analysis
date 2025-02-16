@@ -7,7 +7,7 @@ This project provides a tool for analyzing Ethereum wallets, allowing users to c
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/wallet-analysis.git
+   git clone https://github.com/ltphuongunited/wallet-analysis.git
    cd wallet-analysis
    ```
 

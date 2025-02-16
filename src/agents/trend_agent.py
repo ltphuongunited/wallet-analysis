@@ -4,11 +4,12 @@ from datetime import datetime, timedelta
 import google.generativeai as genai
 import json
 import os
+from ..config import API_CONFIG
 
 class TrendAgent(Agent):
     def __init__(self):
         super().__init__(name="trend_analyzer")
-        self.gemini_key = os.getenv("GEMINI_KEY")
+        self.gemini_key = API_CONFIG["gemini"]["key"]
         genai.configure(api_key=self.gemini_key)
 
     def load_wallet_data(self, wallet_address):
@@ -92,17 +93,17 @@ class TrendAgent(Agent):
         formatted_output = f"""30-Day Trend:
 - Overall change: {trends["30"]["Overall Change"]}
 - Notable changes:
-    {chr(10).join(['    • ' + change for change in trends["30"]["Notable Changes"]])}
+{chr(10).join(['    • ' + change for change in trends["30"]["Notable Changes"]])}
 
 90-Day Trend:
 - Overall change: {trends["90"]["Overall Change"]}
 - Notable changes:
-    {chr(10).join(['    • ' + change for change in trends["90"]["Notable Changes"]])}
+{chr(10).join(['    • ' + change for change in trends["90"]["Notable Changes"]])}
 
 180-Day Trend:
 - Overall change: {trends["180"]["Overall Change"]}
 - Notable changes:
-    {chr(10).join(['    • ' + change for change in trends["180"]["Notable Changes"]])}
+{chr(10).join(['    • ' + change for change in trends["180"]["Notable Changes"]])}
 
 Conclusion: {ai_analysis}"""
 

@@ -1,0 +1,91 @@
+
+╔══════════════════════════════════════════════════════════════════════
+║ 📌 Wallet Analysis Report
+║ Address: 0x0b976ac2a8c8b9d11cd6fffa688e6756379322c0
+╠══════════════════════════════════════════════════════════════════════
+║ 
+║ 🕒 WALLET AGE ANALYSIS
+    First Transaction: 2021-04-30
+    Wallet Age: 3 years, 9 months, 23 days
+    Category: Established
+    Analysis: AI analysis failed
+╠══════════════════════════════════════════════════════════════════════
+║ 📈 TREND ANALYSIS
+30-Day Trend:
+- Overall change: Stable
+- Notable changes:
+    • 0x34cfc89c735018f189727c92440bf73e85395e4cdfb2308b6120d983b24f7385
+
+90-Day Trend:
+- Overall change: Increase
+- Notable changes:
+    • 0xebce0df063462509057a02ee8a8ee22ab262196c2051740ea72b83e97093fc19
+    • 0x03c8a375e37ed05c8130bf34c7f3eb7256f55041e1e28e0c4ace5ec186574735
+    • 0x198906b972bdb6f8d1aaee0dabb344b95ce2ccacc8fdd8639753ff40ffed19e1
+    • 0xa9ab183cd815b2739770cc4339252f2b4b7f5f44469dbc328549528e044dd6b6
+    • 0x9f619f6f7145078959622180c426af1ed8e049b20f36bd967415d22b8d9ef514
+
+180-Day Trend:
+- Overall change: Increase
+- Notable changes:
+    • 0x679a89b1bf769679a67cbbd54f4bd07fa357a6b4cdde33e4a071779ee53fc4ac
+    • 0x07d6cfdde86695e46aeb1618bf3887a264350e473c462928cfdf4980c3341c42
+    • 0xbce5a098e92a0b625d29d85116bb1cd65dda007afdbe0e4d6db41cbe2ba0cd82
+    • 0xfd8ec3f3fdaf11acc8fb052a02ab5f04a36bf4c7dfcf92e7ad25ed5997479f33
+    • 0x6a3d5a067630c863c427b9730cce1e77b34c5aa73a477aaa287ace2d5d2a0bba
+
+Conclusion: AI analysis failed
+╠══════════════════════════════════════════════════════════════════════
+║ 💰 TRANSACTION ANALYSIS
+Average Transaction Size: $0.00 (Classification: Small)
+Total 30-Day Volume: $0.00 (0.0% of total wallet value)
+
+Top Assets in Transactions:
+1. ETH: 100.0% (Direction: Distributing)
+
+Average Daily Transactions: 0.0
+Analysis: This wallet exhibits minimal transaction activity, characterized by small average transaction sizes, infrequent transactions, and negligible volume relative to its total value. The wallet primarily holds ETH, which has been distributed out of the wallet. This suggests that the wallet is likely used for storing funds rather than for active trading or spending.
+╠══════════════════════════════════════════════════════════════════════
+║ 🤖 BEHAVIORAL ANALYSIS
+    Classification: Likely Human
+    Confidence Level: High
+    Key Indicators:
+        Average Gas Used: 44997.00
+        Average Gas Price (Gwei): 9.22
+        Repetitive Trading Hours: 0.00%
+        Repetitive Trading Days: 0.00%
+    Analysis: **Analysis:**
+
+* **Classification: Likely Human**
+
+This indicates that the wallet's behavior patterns are more consistent with human user behavior rather than automated bot behavior.
+
+* **Confidence: High**
+
+The high confidence level suggests that the analysis is reliable and the classification is likely to be accurate.
+
+**Key Indicators:**
+
+* **Avg Gas Used: 44997.00**
+
+Bots typically use a consistent gas amount to optimize transaction costs. The high and variable gas usage in this wallet suggests human behavior, as humans may adjust gas prices based on transaction urgency or cost considerations.
+
+* **Avg Gas Price: 9.22**
+
+Bots often prioritize transaction speed and use higher gas prices to ensure fast confirmation. The relatively low gas price in this wallet indicates that the user is not prioritizing speed over cost, which is more typical of human behavior.
+
+* **Repetitive Hours: 0.00%**
+
+Bots often operate at specific time intervals for efficiency. The lack of repetitive hours in this wallet suggests that the user does not have a fixed transaction schedule, which is more consistent with human behavior.
+
+* **Repetitive Days: 0.00%**
+
+Similar to repetitive hours, bots often operate on specific days. The absence of repetitive days in this wallet further supports the notion of human behavior.
+
+**Conclusion:**
+
+Based on the provided data, the characteristics of this Ethereum wallet (high gas usage variability, low gas price, lack of repetitive hours and days) are more indicative of **human** behavior. The high confidence level in the classification reinforces this conclusion.
+
+It's important to note that this analysis is based on a limited set of indicators. Additional information, such as transaction patterns, wallet balances, and social media behavior, could further strengthen the assessment.
+║ 
+╚══════════════════════════════════════════════════════════════════════

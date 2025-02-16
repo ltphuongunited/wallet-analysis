@@ -4,6 +4,9 @@ from typing import Optional, List, Dict, Any
 from pydantic import BaseModel
 from phi.workflow import Workflow
 from phi.utils.log import logger
+from rich.console import Console
+from rich.panel import Panel
+from rich.text import Text
 
 from src.agents.behavior_agent import BehaviorAgent
 from src.agents.transaction_agent import TransactionAgent
@@ -18,6 +21,7 @@ class WalletAnalysisConfig(BaseModel):
     transaction_agent: Optional[TransactionAgent] = None
     trend_agent: Optional[TrendAgent] = None
     wallet_age_agent: Optional[WalletAgeAgent] = None
+    console: Optional[Console] = None
 
     model_config = {
         "arbitrary_types_allowed": True
@@ -33,7 +37,8 @@ class WalletAnalysisWorkflow(Workflow):
             behavior_agent=BehaviorAgent(),
             transaction_agent=TransactionAgent(),
             trend_agent=TrendAgent(),
-            wallet_age_agent=WalletAgeAgent()
+            wallet_age_agent=WalletAgeAgent(),
+            console=Console()  # Add console to config
         )
         
         # Pass config to parent class constructor
@@ -42,42 +47,47 @@ class WalletAnalysisWorkflow(Workflow):
     def analyze_wallet(self, wallet_address: str) -> Dict[str, Any]:
         """Analyze a single wallet"""
         try:
-            print('==================================')
-            logger.info(f"Starting analysis for wallet: {wallet_address}")
+            self.config.console.rule("[bold blue]New Wallet Analysis", style="blue")
+            self.config.console.print(Panel(f"[bold green]Analyzing wallet:[/] {wallet_address}", 
+                                   border_style="green"))
             
-            logger.info("Collecting data for wallet analysis")
-            self.config.data_collector.collect_data(wallet_address)
-            logger.info("Analyzing behavior")
-            behavior_analysis = self.config.behavior_agent.analyze(wallet_address)
-            logger.info("Analyzing transactions")
-            transactions_analysis = self.config.transaction_agent.analyze(wallet_address)
-            logger.info("Analyzing trends")
-            trends_analysis = self.config.trend_agent.analyze(wallet_address)
-            logger.info("Analyzing wallet age")
-            age_analysis = self.config.wallet_age_agent.analyze(wallet_address)
-            analysis_results = {
-                "behavior": behavior_analysis,
-                "transactions": transactions_analysis,
-                "trends": trends_analysis,
-                "age": age_analysis
-            }
+            # Collect data with progress indicator
+            with self.config.console.status("[bold yellow]Collecting wallet data...", spinner="dots"):
+                self.config.data_collector.collect_data(wallet_address)
+
+            analysis_results = {}
+            analysis_steps = [
+                ("behavior", self.config.behavior_agent, "Analyzing behavior patterns"),
+                ("transactions", self.config.transaction_agent, "Analyzing transaction history"),
+                ("trends", self.config.trend_agent, "Analyzing market trends"),
+                ("age", self.config.wallet_age_agent, "Analyzing wallet age")
+            ]
+
+            for key, agent, message in analysis_steps:
+                with self.config.console.status(f"[bold yellow]{message}...", spinner="dots"):
+                    analysis_results[key] = agent.analyze(wallet_address)
+                self.config.console.print(f"[green]✓[/] {message} completed")
             
             # Generate and save report
-            report = generate_final_report(
-                wallet_address,
-                analysis_results["age"],
-                analysis_results["transactions"],
-                analysis_results["trends"],
-                analysis_results["behavior"]
-            )
-            report_path = get_report_path(wallet_address)
-            report_path.write_text(report)
-            
-            logger.info(f"Analysis completed for wallet: {wallet_address}")
+            with self.config.console.status("[bold yellow]Generating final report...", spinner="dots"):
+                report = generate_final_report(
+                    wallet_address,
+                    analysis_results["age"],
+                    analysis_results["transactions"],
+                    analysis_results["trends"],
+                    analysis_results["behavior"]
+                )
+                report_path = get_report_path(wallet_address)
+                report_path.write_text(report)
+
+            self.config.console.print(Panel("[bold green]Analysis completed successfully!", 
+                                   border_style="green"))
             return analysis_results
             
         except Exception as e:
-            logger.error(f"Error analyzing wallet {wallet_address}: {str(e)}")
+            error_message = f"Error analyzing wallet {wallet_address}: {str(e)}"
+            self.config.console.print(Panel(f"[bold red]ERROR:[/] {error_message}", 
+                                   border_style="red"))
             raise
 
     def run_batch(self, wallets: List[str]) -> Dict[str, Any]:
@@ -112,30 +122,29 @@ def format_dict_to_string(d, indent=0):
 def generate_final_report(wallet, wallet_age_report, transaction_report, trend_report, behavior_report):
     """Generate a well-formatted report"""
     
-    # Format each section
-    age_section = format_dict_to_string(wallet_age_report, indent=1)
-    trend_section = format_dict_to_string(trend_report, indent=1)
-    transaction_section = format_dict_to_string(transaction_report, indent=1)
-    behavior_section = format_dict_to_string(behavior_report, indent=1)
+    sections = [
+        ("🕒 WALLET AGE ANALYSIS", wallet_age_report),
+        ("📈 TREND ANALYSIS", trend_report),
+        ("💰 TRANSACTION ANALYSIS", transaction_report),
+        ("🤖 BEHAVIORAL ANALYSIS", behavior_report)
+    ]
     
-    report = f"""
-╔══════════════════════════════════════════════════════════════════════════════
-║ 📌 Wallet Analysis Report
-║ Address: {wallet}
-╠══════════════════════════════════════════════════════════════════════════════
-║ 
-║ 🕒 WALLET AGE ANALYSIS
-{age_section}
-╠══════════════════════════════════════════════════════════════════════════════
-║ 📈 TREND ANALYSIS
-{trend_section}
-╠══════════════════════════════════════════════════════════════════════════════
-║ 💰 TRANSACTION ANALYSIS
-{transaction_section}
-╠══════════════════════════════════════════════════════════════════════════════
-║ 🤖 BEHAVIORAL ANALYSIS
-{behavior_section}
-║ 
-╚══════════════════════════════════════════════════════════════════════════════
-"""
+    formatted_sections = []
+    for title, content in sections:
+        section = f"║ {title}\n{format_dict_to_string(content, indent=1)}"
+        formatted_sections.append(section)
+    
+    border_line = "═" * 70
+    separator = f"\n╠{border_line}\n"
+    
+    report = (
+        f"\n╔{border_line}\n"
+        f"║ 📌 Wallet Analysis Report\n"
+        f"║ Address: {wallet}\n"
+        f"╠{border_line}\n"
+        f"║ \n"
+        f"{separator.join(formatted_sections)}\n"
+        f"║ \n"
+        f"╚{border_line}\n"
+    )
     return report

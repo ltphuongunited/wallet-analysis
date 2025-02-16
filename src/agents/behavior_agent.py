@@ -6,11 +6,12 @@ from collections import Counter
 import json
 import os
 from src.utils.rate_limiter import etherscan_rate_limit, with_retry
+from ..config import API_CONFIG
 
 class BehaviorAgent(Agent):
     def __init__(self):
         super().__init__(name="behavior_analyzer")
-        self.gemini_key = os.getenv("GEMINI_KEY")
+        self.gemini_key = API_CONFIG["gemini"]["key"]
         genai.configure(api_key=self.gemini_key)
 
     def load_wallet_data(self, wallet_address):

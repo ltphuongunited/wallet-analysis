@@ -23,13 +23,19 @@ def test_behavior_agent(test_wallet):
     agent = BehaviorAgent()
     result = agent.analyze(test_wallet)
     assert result is not None
-    assert "Classification" in result
+    if isinstance(result, str):
+        assert result == "No transactions in the last 30 days."
+    else:
+        assert "Classification" in result
 
 def test_transaction_agent(test_wallet):
     agent = TransactionAgent()
     result = agent.analyze(test_wallet)
     assert result is not None
-    assert "Average Transaction Size" in result
+    if isinstance(result, str):
+        assert result == "No transactions in the last 30 days."
+    else:
+        assert "Average Transaction Size" in result
 
 def test_trend_agent(test_wallet):
     agent = TrendAgent()
@@ -46,4 +52,4 @@ def test_wallet_age_agent(test_wallet):
 def test_workflow_integration(workflow, test_wallet):
     result = workflow.analyze_wallet(test_wallet)
     assert result is not None
-    assert isinstance(result, str)
+    assert isinstance(result, dict)

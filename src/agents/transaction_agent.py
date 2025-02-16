@@ -5,11 +5,12 @@ import google.generativeai as genai
 from collections import Counter
 import json
 import os
+from ..config import API_CONFIG
 
 class TransactionAgent(Agent):
     def __init__(self):
         super().__init__(name="transaction_analyzer")
-        self.gemini_key = os.getenv("GEMINI_KEY")
+        self.gemini_key = API_CONFIG["gemini"]["key"]
         genai.configure(api_key=self.gemini_key)
 
     def load_wallet_data(self, wallet_address):

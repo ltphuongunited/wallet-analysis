@@ -129,21 +129,49 @@ The analysis results will be saved as a report file in the `reports` directory. 
 ╠══════════════════════════════════════════════════════════════════════════════
 ║ 
 ║ 🕒 WALLET AGE ANALYSIS
-- First Transaction: <date>
-- Wallet Age: <age>
-- Category: <category>
-║ 
+First Transaction: YYYY-MM-DD
+Wallet Age: X years, Y months, Z days
+Category: [Category]
+Analysis: [Brief interpretation]
+
+╠══════════════════════════════════════════════════════════════════════════════
 ║ 📈 TREND ANALYSIS
-- 30-Day Trend: <trend>
-- Notable Changes: <changes>
-║ 
+30-Day Trend:
+- Overall change: [increase/decrease/stable]
+- Notable changes: [List significant changes]
+
+90-Day Trend:
+- Overall change: [increase/decrease/stable]
+- Notable changes: [List significant changes]
+
+180-Day Trend:
+- Overall change: [increase/decrease/stable]
+- Notable changes: [List significant changes]
+
+Conclusion: [Interpretation of holder's strategy]
+
+╠══════════════════════════════════════════════════════════════════════════════
 ║ 💰 TRANSACTION ANALYSIS
-- Average Transaction Size: <size>
-- Total Volume: <volume>
-║ 
+Average Transaction Size: $X (Classification: [Size Category])
+Total 30-Day Volume: $Y (X% of total wallet value)
+
+Top Assets in Transactions:
+1. Asset A: X% (Direction: [Pattern])
+2. Asset B: Y% (Direction: [Pattern])
+3. Asset C: Z% (Direction: [Pattern])
+
+Average Daily Transactions: X
+Analysis: [Interpretation of behavior]
+
+╠══════════════════════════════════════════════════════════════════════════════
 ║ 🤖 BEHAVIORAL ANALYSIS
-- Classification: <classification>
-- Confidence Level: <confidence>
+Classification: [Bot/Human/Uncertain]
+Confidence Level: [High/Medium/Low]
+Key Indicators:
+- [List key factors supporting classification]
+- [List any contradicting factors]
+Analysis: [Brief explanation of conclusion]
+
 ║ 
 ╚══════════════════════════════════════════════════════════════════════════════
 ```

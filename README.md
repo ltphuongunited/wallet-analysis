@@ -5,13 +5,19 @@ This project provides a tool for analyzing Ethereum wallets, allowing users to c
 
 ## 🛠️ Setup Instructions
 
-1. **Install the required dependencies**:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/wallet-analysis.git
+   cd wallet-analysis
+   ```
+
+2. **Install the required dependencies**:
    Use `pip` to install the necessary libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Create a `.env` file**:
+3. **Create a `.env` file**:
    Create a `.env` file in the root directory of the project and add the necessary API keys:
    ```plaintext
    ETHERSCAN_KEY=your_etherscan_api_key
@@ -73,10 +79,26 @@ The wallet data is stored in JSON format with the following structure:
     },
     "Transaction History": [
         {
+            "blockNumber": "block_number",
             "timeStamp": "timestamp",
-            "value": "transaction_value",
+            "hash": "transaction_hash",
+            "nonce": "nonce",
+            "blockHash": "block_hash",
+            "transactionIndex": "transaction_index",
+            "from": "sender_address",
             "to": "recipient_address",
-            "tokenSymbol": "TOKEN_SYMBOL"
+            "value": "transaction_value",
+            "gas": "gas",
+            "gasPrice": "gas_price",
+            "isError": "is_error",
+            "txreceipt_status": "txreceipt_status",
+            "input": "input_data",
+            "contractAddress": "contract_address",
+            "cumulativeGasUsed": "cumulative_gas_used",
+            "gasUsed": "gas_used",
+            "confirmations": "confirmations",
+            "methodId": "method_id",
+            "functionName": "function_name"
         }
     ]
 }
